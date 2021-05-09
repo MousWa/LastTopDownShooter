@@ -18483,7 +18483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d0e62721e731a47916713e45e4ef50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 804518765}
   lerpSpeed: 1
 --- !u!20 &519420031
 Camera:
@@ -18626,6 +18626,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 873a9c743b44b4149b3e1e480749eccb, type: 3}
+--- !u!4 &804518765 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5711850877309568276, guid: 873a9c743b44b4149b3e1e480749eccb,
+    type: 3}
+  m_PrefabInstance: {fileID: 804518764}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &995619431 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5711850877608925530, guid: 873a9c743b44b4149b3e1e480749eccb,
