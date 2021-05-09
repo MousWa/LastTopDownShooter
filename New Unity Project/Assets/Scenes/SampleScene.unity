@@ -113601,6 +113601,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 5711850877309568283, guid: 873a9c743b44b4149b3e1e480749eccb,
         type: 3}
       propertyPath: m_SortingOrder
@@ -113618,6 +113619,8 @@ PrefabInstance:
 >>>>>>> parent of a264180 (colaider)
 =======
 >>>>>>> parent of b34c1b7 (s)
+=======
+>>>>>>> parent of a264180 (colaider)
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 873a9c743b44b4149b3e1e480749eccb, type: 3}
 --- !u!1 &1341344659 stripped
