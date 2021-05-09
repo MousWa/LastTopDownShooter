@@ -7,6 +7,10 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPerfab;
     public float buzlletSpeed = 15f;
+   
+    public int maxHalth = 100;
+
+    
 
     // Update is called once per frame
     void Update()
