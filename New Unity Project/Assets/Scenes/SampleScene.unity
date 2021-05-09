@@ -280,6 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 5711850877309568283, guid: 873a9c743b44b4149b3e1e480749eccb,
         type: 3}
       propertyPath: m_SortingOrder
@@ -291,6 +292,8 @@ PrefabInstance:
       value: 1.23
 >>>>>>> a264180cf5e3ab4af0ca015d1d5623a3e265e03d
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of a264180 (colaider)
 =======
 >>>>>>> parent of a264180 (colaider)
     m_RemovedComponents: []
