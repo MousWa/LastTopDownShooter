@@ -6,7 +6,7 @@ public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPerfab;
-    public float buzlletSpeed = 15f;
+    public float buzlletSpeed ;
 
     // Update is called once per frame
     void Update()

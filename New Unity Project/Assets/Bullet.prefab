@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 1683924391687183387}
   - component: {fileID: 8364839537982260845}
   - component: {fileID: 5213614254989043253}
-  - component: {fileID: 3414786022481683031}
-  - component: {fileID: 3521010646426098627}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -147,38 +145,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee709d4d3f249c4ea559999add87e63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 8241362183356945472}
---- !u!114 &3414786022481683031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8241362183356945472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3cf6ce372cb9154b89c6cc33de6ed70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 0}
-  bulletPerfab: {fileID: 0}
-  buzlletSpeed: 15
---- !u!95 &3521010646426098627
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8241362183356945472}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 87acb4f2a31f35447bdbc36d18e1f6a2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  hitEffect: {fileID: 5995798022844536466, guid: 49f733961a55caf44995657dc8059fcf,
+    type: 3}
