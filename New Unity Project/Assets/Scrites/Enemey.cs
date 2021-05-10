@@ -32,6 +32,7 @@ public class Enemey : MonoBehaviour
         {
             Instantiate(Bullet, firePoint.position, firePoint.rotation);
             timeBetShoot = startShoot;
+            FireSound.PlaySound("EFire");
 
         }
         else

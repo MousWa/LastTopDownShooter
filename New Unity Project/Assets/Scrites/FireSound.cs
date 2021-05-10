@@ -5,13 +5,14 @@ using UnityEngine;
 public class FireSound : MonoBehaviour
 {
     public static AudioClip fireSound;
+    public static AudioClip EnemyfireSound;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
     void Start()
     {
         fireSound = Resources.Load<AudioClip>("fire");
-
+        EnemyfireSound = Resources.Load<AudioClip>("FireEnemey");
         audioSrc = GetComponent<AudioSource>();
     }
 
@@ -26,6 +27,9 @@ public class FireSound : MonoBehaviour
         {
             case "Fire":
                 audioSrc.PlayOneShot(fireSound);
+                break;
+            case "EFire":
+                audioSrc.PlayOneShot(EnemyfireSound);
                 break;
         }
     }
