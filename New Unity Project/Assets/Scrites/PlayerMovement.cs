@@ -9,7 +9,9 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     Vector2 mousePos;
     public Camera cam;
+ 
     // Update is called once per frame
+   
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");

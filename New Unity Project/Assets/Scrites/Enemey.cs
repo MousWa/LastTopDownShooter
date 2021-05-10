@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class Enemey : MonoBehaviour
 {
+    public Transform firePoint;
     public Transform player;
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
     public float distance;
-
+    private float timeBetShoot;
+    public float startShoot;
+    public GameObject Bullet;
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        timeBetShoot = startShoot;
     }
 
     // Update is called once per frame
@@ -24,6 +28,16 @@ public class Enemey : MonoBehaviour
         rb.rotation = angle;
         direction.Normalize();
         movement = direction;
+        if (timeBetShoot <= 0)
+        {
+            Instantiate(Bullet, firePoint.position, firePoint.rotation);
+            timeBetShoot = startShoot;
+
+        }
+        else
+        {
+            timeBetShoot -= Time.deltaTime;
+        }
     }
     private void FixedUpdate()
     {
