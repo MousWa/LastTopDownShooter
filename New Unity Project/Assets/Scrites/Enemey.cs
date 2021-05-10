@@ -8,6 +8,7 @@ public class Enemey : MonoBehaviour
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
+    public float distance;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,9 @@ public class Enemey : MonoBehaviour
     }
     void moveCharacter(Vector2 direction)
     {
-        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        if (Vector3.Distance(rb.position, player.position) > distance)
+        {
+            rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        }
     }
 }
