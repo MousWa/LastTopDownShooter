@@ -13,7 +13,7 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1")) {
             Shoot();
-
+            FireSound.PlaySound("fire");
         }
     }
     void Shoot() {
