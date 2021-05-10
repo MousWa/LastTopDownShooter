@@ -1,37 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CodeMonkey.Utils;
 
 public class Enemey : MonoBehaviour
 {
-    private EnemyPathfindingMovement pathfindingMovment;
-    private Vector3 startingPostiton;
-    private Vector3 roamPostition;
-   
-    private void Awake()
-    {
-        pathfindingMovment = GetComponent<EnemyPathfindingMovement>();
-    }
+    public Transform player;
+    public float moveSpeed = 5f;
+    private Rigidbody2D rb;
+    private Vector2 movement;
+
     // Start is called before the first frame update
     void Start()
     {
-        startingPostiton = transform.position;
-        roamPostition = GetRoamingPosition();
+        rb = this.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        pathfindingMovment.MoveToTimer(roamPostition);
-        float reachedPositionDistance = 10f;
-        if(Vector3.Distance(transform.position, roamPostition)< reachedPositionDistance)
-        {
-            roamPostition = GetRoamingPosition();
-        }
+        Vector3 direction = player.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        rb.rotation = angle;
+        direction.Normalize();
+        movement = direction;
     }
-    Vector3 GetRoamingPosition()
+    private void FixedUpdate()
     {
-        return startingPostiton + UtilsClass.GetRandomDir() * Random.Range(10f, 70f);
+        moveCharacter(movement);
+    }
+    void moveCharacter(Vector2 direction)
+    {
+        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 }
