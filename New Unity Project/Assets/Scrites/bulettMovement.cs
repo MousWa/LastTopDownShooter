@@ -27,7 +27,7 @@ public class bulettMovement : MonoBehaviour
         {
          
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 1f);
+            Destroy(effect, 0.1f);
             Destroy(gameObject);
         }
 
@@ -36,11 +36,11 @@ public class bulettMovement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("kjasdbjkasbdas");
+      
         if (collision.collider.CompareTag("Player"))
         {
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 1f);
+            Destroy(effect, 0.1f);
             Destroy(gameObject);
         }
     }

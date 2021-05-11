@@ -21,6 +21,9 @@ public class EnemyHealth : MonoBehaviour
         {
             TakeDamage(20);
         }
+        if (current == 0) {
+            Destroy(gameObject);
+        }
     }
    
     
