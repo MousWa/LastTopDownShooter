@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -19,7 +19,14 @@ public class Health : MonoBehaviour
     }
 
     // Update is called once per frame
+    private void Update()
+    {
+        if (current == 0) {
+            Destroy(gameObject);
+            SceneManager.LoadScene("Scenes/Menu");
 
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         print("kjasdbjkasbdas");

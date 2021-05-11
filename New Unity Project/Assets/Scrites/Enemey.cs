@@ -9,7 +9,8 @@ public class Enemey : MonoBehaviour
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
-    public float distance;
+    public float movedistance;
+    public float shootDistance;
     private float timeBetShoot;
     public float startShoot;
     public GameObject Bullet;
@@ -30,10 +31,12 @@ public class Enemey : MonoBehaviour
         movement = direction;
         if (timeBetShoot <= 0)
         {
-            Instantiate(Bullet, firePoint.position, firePoint.rotation);
-            timeBetShoot = startShoot;
-            FireSound.PlaySound("EFire");
-
+            if (Vector3.Distance(rb.position, player.position) < shootDistance)
+            {
+                Instantiate(Bullet, firePoint.position, firePoint.rotation);
+                timeBetShoot = startShoot;
+                FireSound.PlaySound("EFire");
+            }
         }
         else
         {
@@ -46,7 +49,7 @@ public class Enemey : MonoBehaviour
     }
     void moveCharacter(Vector2 direction)
     {
-        if (Vector3.Distance(rb.position, player.position) > distance)
+        if (Vector3.Distance(rb.position, player.position) > movedistance)
         {
             rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
         }
