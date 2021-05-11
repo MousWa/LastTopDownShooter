@@ -10,41 +10,40 @@ public class bulettMovement : MonoBehaviour
     public GameObject hitEffect;
     private Transform player;
     private Vector2 target;
-   public HealthBar health;
 
+    public GameObject bullet;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         target = new Vector2(player.position.x, player.position.y);
-
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        if (transform.position.x == target.x && transform.position.y == target.y) {
-            
-            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 1f);
-            Destroy(gameObject);
-          
-            health.SetHealth();
-        }
-
-
-
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+       bullet.transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        if (bullet.transform.position.x == target.x && bullet.transform.position.y == target.y)
         {
-          
+         
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
             Destroy(effect, 1f);
             Destroy(gameObject);
-            health.SetHealth();
+        }
+
+
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("kjasdbjkasbdas");
+        if (collision.collider.CompareTag("Player"))
+        {
+            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 1f);
+            Destroy(gameObject);
         }
     }
+   
 
 }

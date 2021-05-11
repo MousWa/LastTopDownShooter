@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8283917451621592202}
   m_Layer: 0
   m_Name: Laser4
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8781116878952907210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.033, y: 0.022, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -138,4 +138,4 @@ MonoBehaviour:
   speed: 20
   hitEffect: {fileID: 5995798022844536466, guid: 49f733961a55caf44995657dc8059fcf,
     type: 3}
-  health: {fileID: 5748261831206250281, guid: e420c7922fcd8bb479e1abb40b527e88, type: 3}
+  bullet: {fileID: 8781116878952907210}
